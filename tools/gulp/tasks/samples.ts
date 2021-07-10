@@ -52,6 +52,7 @@ task('install:samples', async () =>
     'npm install',
   ),
 );
+task('lint:samples', async () => executeNpmScriptInSamples('npm run lint'));
 task('build:samples', async () => executeNpmScriptInSamples('npm run build'));
 task('test:samples', async () =>
   executeNpmScriptInSamples('npm run test', '--passWithNoTests'),

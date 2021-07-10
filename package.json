@@ -18,7 +18,7 @@
     "postbuild": "gulp move",
     "prebuild:prod": "npm run clean",
     "build:prod": "gulp build",
-    "build:samples": "gulp install:samples && npm run build && gulp build:samples && gulp test:samples && gulp test:e2e:samples",
+    "build:samples": "gulp install:samples && npm run build && gulp lint:samples && gulp build:samples && gulp test:samples && gulp test:e2e:samples",
     "clean": "gulp clean:bundle",
     "codechecks:benchmarks": "codechecks ./tools/benchmarks/check-benchmarks.ts",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
